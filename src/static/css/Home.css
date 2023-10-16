@@ -40,12 +40,8 @@
         background-attachment: fixed;
         background-image: url("../img/hisoka_background_mobile.jpg") !important;
         background-repeat: no-repeat;
-        background-position: -10px;
+        background-position: center;
         background-size: cover;
-    }
-    .Home {
-        width: 1000px;
-        height: 962px;
     }
 
     .Bio {
