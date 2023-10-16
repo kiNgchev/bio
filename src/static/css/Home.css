@@ -34,7 +34,7 @@
     }
 }
 
-@media screen and (max-width: 1080px) and (max-height: 1920px) {
+@media screen and (max-width: 400px) and (max-height: 875px) {
     html {
         background-color: black;
         background-attachment: fixed;
@@ -45,10 +45,9 @@
     }
 
     .Bio {
-        width: auto;
-        height: auto;
         transition: background-color 0.5s ease;
-        padding: 490px 24px 20px 30px;
+        padding: 500px 20px 20px 30px;
+        margin-left: 45vw;
         backdrop-filter: blur(10px);
     }
 
