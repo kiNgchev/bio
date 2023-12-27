@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../../../public/fonts/Manrope-Medium.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(25%, auto));
+    gap: 20px;
+    max-width: 100%;
+    width: var(--max-width);
+    margin: 20px
+}
+
+.aboutcardimage {
+    border: 2px solid #b467ff;
+    border-radius: 100%;
+}
+
+.aboutcardmain {
+    padding: 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    background: rgba(var(--card-rgb), 0);
+    border: 2px solid rgba(var(--card-border-rgb), 0.5);
+    transition: background 200ms, border 200ms;
+    max-width: 100%;
+    width: var(--max-width);
+}
+
+.aboutcardmain p {
+    font-family: Manrope, serif;
+    text-align: left;
+    display: flex;
+    margin: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.aboutcard {
+    padding: 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    background: rgba(var(--card-rgb), 0);
+    border: 2px solid rgba(var(--card-border-rgb), 0.5);
+    transition: background 200ms, border 200ms;
+}
+
+.aboutcard span {
+    display: inline-block;
+    transition: transform 200ms;
+}
+
+.aboutcard h2 {
+    font-family: Manrope, serif;
+    text-align: left;
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.aboutcard p {
+    font-family: Manrope, serif;
+    text-align: left;
+    display: flex;
+    margin: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.aboutcard a {
+    font-family: Manrope, serif;
+    color: #6a5eff;
+    text-shadow: #6a5eff 10px 1px 10px;
+}
+
+.aboutul {
+    display: flex;
+    align-items: flex-start
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .aboutcardmain:hover {
+        background: rgba(var(--card-rgb), 0.1);
+    }
+
+    .aboutcard:hover {
+        background: rgba(var(--card-rgb), 0.1);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .aboutcard:hover span {
+        transform: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .content {
+        padding: 4rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .aboutcard {
+        padding: 1rem 2.5rem;
+    }
+
+    .aboutcard h2 {
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+
+    .aboutul {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .grid {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
